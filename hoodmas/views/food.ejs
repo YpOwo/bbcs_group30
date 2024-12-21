@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoodmas || Get a warm meal</title>
+    <style>
+      /* all css */
+      button {
+          margin: 10px 10px;
+          padding: 10px 15px;
+          font-size: 1rem;
+          color: white;
+          background-color: #ff7878;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+          background-color: #ff3b3f;
+      }
+
+      h1 {
+          color: #ff3b3f;
+          font-family: "Sofia", sans-serif;
+          font-size: 5rem;
+          text-shadow: 3px 3px 3px #ababab;
+          padding: 10px;                         /* Add some padding around the text */
+          text-align: center;
+      }
+
+      h2 {
+          font-size: 2rem;
+          margin: 20px 0;
+      }
+
+      p, .p2{
+          font-family: sans-serif;
+      }
+
+      /* Snowflake Icon */
+      .snowflake {
+          font-size: 50px;
+          position: fixed;
+          top:20px;
+          right: 50px;
+          cursor: pointer;
+          z-index: 1000;  /* Ensures the snowflake icon stays on top */
+          transition: 0.5s;  /* Smooth transition when toggling */
+          padding: 10px;
+      }
+
+      /* Side Menu */
+      .side-menu {
+          height: 100%;
+          width: 0;  /* Initially hidden */
+          position: fixed;
+          top: 0;
+          right: 0;
+          background-color: #ff3b3f;
+          overflow-x: hidden;
+          transition: 0.5s;  /* Smooth transition for opening */
+          padding-top: 100px;  /* Space for links */
+      }
+
+      /* Side Menu Links */
+      .side-menu a {
+          padding: 20px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: white;
+          display: block;
+          transition: 0.3s;
+      }
+
+      /* Change color on hover */
+      .side-menu a:hover {
+          background-color: #ff7878;
+          color: black;
+      }
+
+      /* Open the side menu */
+      .side-menu.open {
+          width: 20%;  /* Takes up 20% of the right side */
+      }
+
+      .go-back {
+          position: absolute;
+          top: 50px;
+          left: 50px;
+          cursor: pointer;
+          z-index: 1000;  
+      }
+
+      /*food css*/
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html{
+      border-top-style: solid;
+      border-top-color:#ff3b3f;
+      border-top-width: 30px;
+      padding-bottom: 40px;
+    }
+
+    body{
+      background-image: url('food.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: bottom;  /* Ensure the top part of the image is kept */
+      height: 100vh; /* Ensure the homepage div covers the full height of the viewport */
+      display: flex;
+      flex-direction: column; 
+      padding: 20px 200px;
+      margin-bottom: 200px;
+    }
+
+    .food{
+      display: flex;
+      column-gap: 100px;
+    }
+
+    .food-form {
+      margin-top: 150px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 500px;  /* Adjust the width of the form */
+      max-width: 100%;  /* Ensure the form doesn't overflow */
+      margin-right: 20px; /* Add some space from the right edge */
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    /* Form label styling */
+    .food-form label {
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    /* Input and textarea styling */
+    .food-form input, .clothes-form textarea {
+      width: 95%;  /* Ensure input fields fill the form width */
+      padding: 15px;  /* Increase padding to make the input boxes bigger */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 12px; /* Add space between fields */
+    }
+
+    /* Adjust the size of the textarea */
+    .food-form textarea {
+      resize: vertical;  /* Allow vertical resizing of the textarea */
+    }
+    </style>
+</head>
+<body>
+  <script>
+    function toggleMenu() {
+        var sideMenu = document.getElementById('sideMenu');
+        var snowflake = document.querySelector('.snowflake');
+        
+        // Toggle the 'open' class to show/hide the side menu
+        sideMenu.classList.toggle('open');
+        
+    }
+  </script>
+    <div class="food">
+<div class="food-body">
+    <div class="go-back"><a href="/gencorner"><button>Go Back</button></a></div>
+
+    <div class="snowflake" onclick="toggleMenu()">
+        &#x2744;
+      </div>
+
+      <div class="side-menu" id="sideMenu">
+        <a href="/">Home</a>
+        <a href="/games">Games</a>
+        <a href="/secretsanta">Secret Santa</a>
+        <a href="/gencorner">Generosity Corner</a>
+      </div>
+
+    <h1>Share a meal!</h1>
+    <h2>Big Bites </h2>
+    <img src ="bigbites.avif" alt="bigbites" width="300" height="200">
+    <p>Big Bites is designed to connect people in need with restaurants that have extra large meals at the end of the day. Whether it's a family-sized pizza, a hearty soup, or a large tray of freshly prepared food, participating restaurants donate these meals to individuals and families who can benefit from a delicious, filling dinner. If you’re looking for a substantial meal, Big Bites is your go-to option. No one should have to go hungry when there’s extra food available!</p>
+    <br>
+    <details>
+        <summary><span class="p2">Information<span></summary>
+        <p>1. Eligibility:</p> 
+        <p>   Anyone who is in need of a large meal!</p>
+        <p>2. How to obtain the shared meal:</p>
+        <p>   Fill in the form on the right and we will get back to you shortly!</p>
+    </details>
+
+
+    <br>
+
+    <h2>Small Bites </h2>
+    <img src ="smallbites.avif" alt="smallbites" width="500" height="300">
+    <p>Small Bites lets peopel enjoy lighter, yet satisfying meals from restaurants that have extra small portions or snacks at the end of the day. These may include appetizers, sandwiches, salads, desserts, or other quick bites. Whether you’re in need of a snack or a smaller meal, Small Bites provides an accessible way to enjoy quality food without the need for a full meal.</p>
+    <br>
+    <details>
+        <summary><span class="p2">Information<span></summary>
+            <p>1. Eligibility:</p> 
+            <p>   Anyone who is in need of a large meal!</p>
+            <p>2. How to obtain the shared meal:</p>
+            <p>   Fill in the form on the right and we will get back to you shortly!</p>
+    </details>
+</div>
+<div class="food-form-body">
+    <form class="food-form">
+      <label for="userName"><h4>Your Name:</h4></label>
+      <input type="text" id="userName" name="userName" required=""><br>
+
+      <label for="email"><h4>Your Email:</h4></label>
+      <input type="text" id="email" name="email" required=""><br>
+
+      <label for="reason"><h4>Required information(e.g. Allergies, Delivery/Pick-up):</h4></label><br>
+      <textarea id="reason" name="reason" rows="4" required=""></textarea><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+
+</div>
+</body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</html>

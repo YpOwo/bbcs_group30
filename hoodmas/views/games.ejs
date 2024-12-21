@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8">
+<meta name= "viewport" content="width=device-width, initial scale=1.0">
+  <title>Hoodmas || Games</title>
+  <style>
+    /*all css*/
+    button {
+      margin: 10px 10px;
+      padding: 10px 15px;
+      font-size: 1rem;
+      color: white;
+      background-color: #ff7878;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff3b3f;
+    }
+
+    h1 {
+      color: #ff3b3f;
+      font-family: "Sofia", sans-serif;
+      font-size: 5rem;
+      text-shadow: 3px 3px 3px #ababab;
+      padding: 10px;                         /* Add some padding around the text */
+      text-align: center;
+    }
+
+    p, .p2{
+        font-family: sans-serif;
+    }
+
+    /* Snowflake Icon */
+    .snowflake {
+      font-size: 50px;
+      position: fixed;
+      top:20px;
+      right: 50px;
+      cursor: pointer;
+      z-index: 1000;  /* Ensures the snowflake icon stays on top */
+      transition: 0.5s;  /* Smooth transition when toggling */
+      padding: 10px;
+    }
+
+    /* Side Menu */
+    .side-menu {
+      height: 100%;
+      width: 0;  /* Initially hidden */
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: #ff3b3f;
+      overflow-x: hidden;
+      transition: 0.5s;  /* Smooth transition for opening */
+      padding-top: 100px;  /* Space for links */
+    }
+
+    /* Side Menu Links */
+    .side-menu a {
+      padding: 20px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    /* Change color on hover */
+    .side-menu a:hover {
+      background-color: #ff7878;
+      color: black;
+    }
+
+    /* Open the side menu */
+    .side-menu.open {
+      width: 20%;  /* Takes up 20% of the right side */
+    }
+
+    .go-back {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      cursor: pointer;
+      z-index: 1000;  
+    }
+
+    /*games css*/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html{
+      border-top-style: solid;
+      border-top-color:#ff3b3f;
+      border-top-width: 30px;
+      padding-bottom: 40px;
+    }
+    
+    body {
+      display: flex;
+      flex-direction: column; 
+      padding: 20px 350px;
+    }
+    
+    .gamesh2 {
+      font-size: 2rem;
+      margin:0;
+      color: #ff3b3f;
+    }
+
+    .gamesh3 {
+      font-size: 25px;
+      margin: 20px 0;
+      color: green;
+    }
+  </style>
+</head>
+  <body>
+    <script>
+      function toggleMenu() {
+          var sideMenu = document.getElementById('sideMenu');
+          var snowflake = document.querySelector('.snowflake');
+          
+          // Toggle the 'open' class to show/hide the side menu
+          sideMenu.classList.toggle('open');
+          
+        }
+    </script>
+    <div class="snowflake" onclick="toggleMenu()">
+      &#x2744;
+    </div>
+
+    <div class="side-menu" id="sideMenu">
+      <a href="/">Home</a>
+      <a href="/games">Games</a>
+      <a href="/secretsanta">Secret Santa</a>
+      <a href="/gencorner">Generosity Corner</a>
+    </div>
+
+    <div class="go-back"><a href="/"><button>Go Back</button></a></div>
+    <h1>Christmas Games!</h1>
+    <h2 class="gamesh2">Day 1: A Partridge in a Pear Tree</h2>
+    <h3 class="gamesh3">Game Title: Pear Tree Protector</h3>
+    <h4>Description: Defend your precious pear tree from mischievous critters trying to steal your partridge. Use slingshots, traps, and clever gardening strategies to keep your tree safe. Collect as many points as possible!</h4>
+    <a href=""><button>Enter here!</button></a>
+
+    <br>
+
+    <h2 class="gamesh2">Day 2: Two Turtle Doves</h2>
+    <h3 class="gamesh3">Game Title: Dove Duo Dash</h3>
+    <h4>Description: Guide two inseparable turtle doves through a series of aerial challenges. Solve puzzles, avoid predators, and navigate through mazes to keep their love story alive.</h4>
+    <a href=""><button>Enter here!</button></a>
+
+    <br>
+
+    <h2 class="gamesh2">Day 3: Three French Hens</h2>
+    <h3 class="gamesh3">Game Title: Hen Heist in Paris</h3>
+    <h4>Description: Three daring French hens are on a mission to steal the finest baguette in Paris. Sneak past bakers, dodge security cameras, and use teamwork to achieve their goal.</h4>
+    <a href=""><button>Enter here!</button></a>
+
+    <br>
+
+    <h2 class="gamesh2">Day 4: Four Calling Birds</h2>
+    <h3 class="gamesh3">Game Title: Calling Birds Challenge</h3>
+    <h4>Description: Help the Calling Birds fill in the missing Christmas lyrics as they bring festive cheers to all creatures this season! </h4>
+    <a href=""><button>Enter here!</button></a>
+
+    <br>
+    
+    <h2 class="gamesh2">Day 5: Five Golden Rings</h2>
+    <h3 class="gamesh3">Game Title: Christmas Ring Toss</h3>
+    <h4>Description: Step right up to test your ring-tossing skills! Be sure not to miss as you only have five precious rings!</h4>
+    <a href=""><button>Enter here!</button></a>
+
+    <br>
+    
+    <h2 class="gamesh2">Day 6: Six Geese a-Laying</h2>
+    <h3 class="gamesh3">Game Title: Geese Egg Clicker</h3>
+    <h4>Description: Mother Goose needs some help to hatch her golden eggs! Go against your friends and race to see who can crack the egg first!</h4>
+    <a href=""><button>Enter here!</button></a>
+
+    <br>
+    
+    <h2 class="gamesh2">Day 7: Seven Swans a-Swimming</h2>
+    <h3 class="gamesh3">Game Title: Swan Serenade</h3>
+    <h4>Description: A serene water ballet game where players control graceful swans performing synchronized swimming routines. Compete for the top score in style and precision.</h4>
+    <a href=""><button>Enter here!</button></a>
+
+    <br>
+    
+    <h2 class="gamesh2">Day 8: Eight Maids a-Milking</h2>
+    <h3 class="gamesh3">Game Title: Milk Mayhem</h3>
+    <h4>Description: A chaotic time-management game where you oversee eight energetic maids trying to milk as many cows as possible. Keep the milk flowing while avoiding spills and rowdy livestock!</h4>
+    <a href=""><button>Enter here!</button></a>
+
+    <br>
+    
+    <h2 class="gamesh2">Day 9: Nine Ladies Dancing</h2>
+    <h3 class="gamesh3">Game Title: Dance-Off Delight</h3>
+    <h4>Description: Choreograph dazzling routines for nine dancing ladies to win a prestigious dance competition. Unlock new moves, costumes, and music tracks to outshine your rivals.</h4>
+    <a href=""><button>Enter here!</button></a>
+
+    <br>
+    
+    <h2 class="gamesh2">Day 10: Ten Lords a-Leaping</h2>
+    <h3 class="gamesh3">Game Title: Leap of the Lords</h3>
+    <h4>Description: Control ten noble lords in an epic platforming adventure. Leap across castles, dodge traps, and rescue villagers from a menacing dragon.</h4>
+    <a href=""><button>Enter here!</button></a>
+
+    <br>
+    
+    <h2 class="gamesh2">Day 11: Eleven Pipers Piping</h2>
+    <h3 class="gamesh3">Game Title: Piper's Quest</h3>
+    <h4>Description: Assemble a team of eleven pipers and venture through enchanted lands, using music to charm creatures, solve puzzles, and banish darkness from the realm.</h4>
+    <a href=""><button>Enter here!</button></a>
+
+    <br>
+    
+    <h2 class="gamesh2">Day 12: Twelve Drummers Drumming</h2>
+    <h3 class="gamesh3">Game Title: Drumline Dominion</h3>
+    <h4>Description: Lead twelve drummers in a rhythm-based strategy game where their beats power magical abilities. Master challenging rhythms to defeat enemy forces and inspire your allies.</h4>
+    <a href=""><button>Enter here!</button></a>
+
+    <br>
+
+  </body>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</html>

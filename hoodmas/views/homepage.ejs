@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoodmas || Home</title>
+    <style>
+        /* all css */
+        button {
+            margin: 10px 10px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            color: white;
+            background-color: #ff7878;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff3b3f;
+        }
+
+        h1 {
+            color: #ff3b3f;
+            font-family: "Sofia", sans-serif;
+            font-size: 5rem;
+            text-shadow: 3px 3px 3px #ababab;
+            padding: 10px;                         /* Add some padding around the text */
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        p, .p2{
+            font-family: sans-serif;
+        }
+
+        /* Snowflake Icon */
+        .snowflake {
+            font-size: 50px;
+            position: fixed;
+            top:20px;
+            right: 50px;
+            cursor: pointer;
+            z-index: 1000;  /* Ensures the snowflake icon stays on top */
+            transition: 0.5s;  /* Smooth transition when toggling */
+            padding: 10px;
+        }
+
+        /* Side Menu */
+        .side-menu {
+            height: 100%;
+            width: 0;  /* Initially hidden */
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #ff3b3f;
+            overflow-x: hidden;
+            transition: 0.5s;  /* Smooth transition for opening */
+            padding-top: 100px;  /* Space for links */
+        }
+
+        /* Side Menu Links */
+        .side-menu a {
+            padding: 20px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* Change color on hover */
+        .side-menu a:hover {
+            background-color: #ff7878;
+            color: black;
+        }
+
+        /* Open the side menu */
+        .side-menu.open {
+            width: 20%;  /* Takes up 20% of the right side */
+        }
+
+        .go-back {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            cursor: pointer;
+            z-index: 1000;  
+        }
+
+    /* homepage css */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            border-top-style: solid;
+            border-top-color:#ff3b3f;
+            border-top-width: 30px;
+            padding-bottom: 40px;
+        }
+
+        body {
+            display: flex;
+            align-items: center;      /* Vertical centering */
+            flex-direction: column; 
+
+            margin: auto;
+            width: 100px; 
+        }
+
+        #hpg-h2 {
+            font-size: 2rem;
+            margin: 20px 10px;
+            text-align: center;
+        }
+
+
+
+        /* Make the anchor tag fill the container to make the entire image clickable */
+        .image-link {
+            display: block;
+            text-decoration: none;  /* Remove underline from the link */
+        }
+
+        /* Container with rounded corners */
+        .image-container1, .image-container2, .image-container3 {
+            width: 800px;           /* Set the width of the container */
+            height: 200px;          /* Set the height of the container */
+            border-radius: 20px;    /* Rounded corners */
+            overflow: hidden;       /* Ensures the image fits within the container and does not spill over */
+            border: 2px solid #ccc; /* Optional: Border around the box */
+            position: relative;     /* Needed for responsive layout */
+        }
+
+        /* Image inside the container */
+        .image-container1 img {
+            width: 100%;            /* Make the image take up 100% of the container's width */
+            height: 100%;           /* Make the image take up 100% of the container's height */
+            object-fit: cover;      /* Ensures the image covers the box without distorting its aspect ratio */
+            object-position: 0% 10%;
+        }
+
+        /* Image inside the container */
+        .image-container2 img {
+            width: 100%;            /* Make the image take up 100% of the container's width */
+            height: 100%;           /* Make the image take up 100% of the container's height */
+            object-fit: cover;      /* Ensures the image covers the box without distorting its aspect ratio */
+            object-position: 0% 40%;
+        }
+
+        /* Image inside the container */
+        .image-container3 img {
+            width: 100%;            /* Make the image take up 100% of the container's width */
+            height: 100%;           /* Make the image take up 100% of the container's height */
+            object-fit: cover;      /* Ensures the image covers the box without distorting its aspect ratio */
+            object-position: 0% 45%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function toggleMenu() {
+            var sideMenu = document.getElementById('sideMenu');
+            var snowflake = document.querySelector('.snowflake');
+            
+            // Toggle the 'open' class to show/hide the side menu
+            sideMenu.classList.toggle('open');
+            
+        }
+    </script>
+    <div class= "homepage">
+
+          <div class="snowflake" onclick="toggleMenu()">
+            &#x2744;
+          </div>
+
+          <div class="side-menu" id="sideMenu">
+            <a href="/">Home</a>
+            <a href="/games">Games</a>
+            <a href="/secretsanta">Secret Santa</a>
+            <a href="/gencorner">Generosity Corner</a>
+          </div>
+
+
+        <div class="go-back"><a href="/logout"><button>Logout</button></a></div>
+        <h1>Welcome, <%= users.username %>!</h1>
+
+        <h2 id="hpg-h2">Games</h2>
+        <h4>Christmas games are a great way to spread holiday cheer and have fun with friends and family. Inspired from the twelve days of christmas song, here are twelve games for you to choose from!<a href="/games"><button>></button></a></h4>
+        <a href="/games" class="image-link">
+            <div class="image-container1">
+                <img src="goose.webp" alt="Games-link-image1" />
+            </div>
+        </a>
+
+        <br>
+        <br>
+
+        <h2 id="hpg-h2">Secret Santa</h2>
+        <h4>Join the fun this holiday season with Secret Santa, where you can create your wishlist and draw another user’s name to fulfill their wishes. It’s a special way to share the joy of giving and receiving thoughtful gifts!<a href="/secretsanta"><button>></button></a></h4>
+        <a href="/secretsanta" class="image-link">
+            <div class="image-container2">
+                <img src="secretsanta.jpg" alt="SS-link-image2" />
+            </div>
+        </a>
+
+        <br>
+        <br>
+
+        <h2 id="hpg-h2">Generosity Corner</h2>
+        <h4>Now is your chance to make a meaningful impact, no matter how big or small. Donate clothes, enjoy a warm meal from local restaurants with extra food, or volunteer to support those in need.<a href="/gencorner"><button>></button></a></h4>
+
+        <a href="/gencorner" class="image-link">
+            <div class="image-container3">
+                <img src="generositycorner.jpg" alt="GC-link-image3" />
+            </div>
+        </a>
+
+    </div>
+
+
+</body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</html>
+

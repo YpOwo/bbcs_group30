@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8">
+<meta name= "viewport" content="width=device-width, initial scale=1.0">
+  <title>Hoodmas || Generosity Corner</title>
+  <style>
+    /*all css*/
+    button {
+        margin: 10px 10px;
+        padding: 10px 15px;
+        font-size: 1rem;
+        color: white;
+        background-color: #ff7878;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #ff3b3f;
+    }
+
+    h1 {
+        color: #ff3b3f;
+        font-family: "Sofia", sans-serif;
+        font-size: 5rem;
+        text-shadow: 3px 3px 3px #ababab;
+        padding: 10px;                         /* Add some padding around the text */
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin: 20px 0;
+    }
+
+    p, .p2{
+        font-family: sans-serif;
+    }
+
+    /* Snowflake Icon */
+    .snowflake {
+        font-size: 50px;
+        position: fixed;
+        top:20px;
+        right: 50px;
+        cursor: pointer;
+        z-index: 1000;  /* Ensures the snowflake icon stays on top */
+        transition: 0.5s;  /* Smooth transition when toggling */
+        padding: 10px;
+    }
+
+    /* Side Menu */
+    .side-menu {
+        height: 100%;
+        width: 0;  /* Initially hidden */
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #ff3b3f;
+        overflow-x: hidden;
+        transition: 0.5s;  /* Smooth transition for opening */
+        padding-top: 100px;  /* Space for links */
+    }
+
+    /* Side Menu Links */
+    .side-menu a {
+        padding: 20px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+
+    /* Change color on hover */
+    .side-menu a:hover {
+        background-color: #ff7878;
+        color: black;
+    }
+
+    /* Open the side menu */
+    .side-menu.open {
+        width: 20%;  /* Takes up 20% of the right side */
+    }
+
+    .go-back {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        cursor: pointer;
+        z-index: 1000;  
+    }
+
+    /*generosity corner css*/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html{
+      border-top-style: solid;
+      border-top-color:#ff3b3f;
+      border-top-width: 30px;
+      padding-bottom: 40px;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column; 
+      padding: 20px 350px;
+    }
+  </style>
+</head>
+  <body>
+    <script>
+      function toggleMenu() {
+          var sideMenu = document.getElementById('sideMenu');
+          var snowflake = document.querySelector('.snowflake');
+          
+          // Toggle the 'open' class to show/hide the side menu
+          sideMenu.classList.toggle('open');
+          
+      }
+  </script>
+    <div class="snowflake" onclick="toggleMenu()">
+      &#x2744;
+    </div>
+
+    <div class="side-menu" id="sideMenu">
+      <a href="/">Home</a>
+      <a href="/games">Games</a>
+      <a href="/secretsanta">Secret Santa</a>
+      <a href="/gencorner">Generosity Corner</a>
+    </div>
+
+    <div class="go-back"><a href="/"><button>Go Back</button></a></div>
+    <h1>Share the festive joy!</h1>
+    <h2>Keep warm</h2>
+    <h4>Donating clothes can help those in need — don't throw them away at the end of the year, give them a second life!</h4>
+    <a href="/clothes"><button>Donate your clothes here</button></a>
+
+    <br>
+
+    <h2>Share a meal</h2>
+    <h4>There is enough food to go around, whether big or small, we have something for you!</h4>
+    <a href="/food"><button>Get a warm meal here</button></a>
+
+    <br>
+
+    <h2>Volunteer</h2>
+    <h4>Want to do something nice this christmas? Come volunteer with us and make an impact in your community today!</h4>
+    <a href="/volunteer"><button>Volunteer here!</button></a>
+
+    <br>
+
+  </body>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</html>

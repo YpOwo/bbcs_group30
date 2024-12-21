@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoodmas || Clothes donation</title>
+    <style>
+        /* all css */
+        button {
+            margin: 10px 10px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            color: white;
+            background-color: #ff7878;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff3b3f;
+        }
+
+        h1 {
+            color: #ff3b3f;
+            font-family: "Sofia", sans-serif;
+            font-size: 5rem;
+            text-shadow: 3px 3px 3px #ababab;
+            padding: 10px;                         /* Add some padding around the text */
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        p, .p2{
+            font-family: sans-serif;
+        }
+
+        /* Snowflake Icon */
+        .snowflake {
+            font-size: 50px;
+            position: fixed;
+            top:20px;
+            right: 50px;
+            cursor: pointer;
+            z-index: 1000;  /* Ensures the snowflake icon stays on top */
+            transition: 0.5s;  /* Smooth transition when toggling */
+            padding: 10px;
+        }
+
+        /* Side Menu */
+        .side-menu {
+            height: 100%;
+            width: 0;  /* Initially hidden */
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #ff3b3f;
+            overflow-x: hidden;
+            transition: 0.5s;  /* Smooth transition for opening */
+            padding-top: 100px;  /* Space for links */
+        }
+
+        /* Side Menu Links */
+        .side-menu a {
+            padding: 20px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* Change color on hover */
+        .side-menu a:hover {
+            background-color: #ff7878;
+            color: black;
+        }
+
+        /* Open the side menu */
+        .side-menu.open {
+            width: 20%;  /* Takes up 20% of the right side */
+        }
+
+        .go-back {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            cursor: pointer;
+            z-index: 1000;  
+        } 
+
+        /*clothes css*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html{
+            border-top-style: solid;
+            border-top-color:#ff3b3f;
+            border-top-width: 30px;
+            padding-bottom: 40px;
+        }
+
+        body{
+            background-image: url('clothes.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: bottom;  /* Ensure the top part of the image is kept */
+            height: 100vh; /* Ensure the homepage div covers the full height of the viewport */
+            display: flex;
+            flex-direction: column; 
+            padding: 20px 200px;
+            margin-bottom: 200px;
+        }
+
+        .clothes{
+            display: flex;
+            column-gap: 100px;
+        }
+        
+        .clothes-form {
+            margin-top: 150px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 500px;  /* Adjust the width of the form */
+            max-width: 100%;  /* Ensure the form doesn't overflow */
+            margin-right: 20px; /* Add some space from the right edge */
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        /* Form label styling */
+        .clothes-form label {
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        /* Input and textarea styling */
+        .clothes-form input, .clothes-form textarea {
+            width: 95%;  /* Ensure input fields fill the form width */
+            padding: 15px;  /* Increase padding to make the input boxes bigger */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 12px; /* Add space between fields */
+        }
+        
+        /* Adjust the size of the textarea */
+        .clothes-form textarea {
+            resize: vertical;  /* Allow vertical resizing of the textarea */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function toggleMenu() {
+            var sideMenu = document.getElementById('sideMenu');
+            var snowflake = document.querySelector('.snowflake');
+            
+            // Toggle the 'open' class to show/hide the side menu
+            sideMenu.classList.toggle('open');
+            
+        }
+    </script>
+    <div class="clothes">
+        <div class="clothes-body">
+        <div class="snowflake" onclick="toggleMenu()">
+            &#x2744;
+          </div>
+
+          <div class="side-menu" id="sideMenu">
+            <a href="/">Home</a>
+            <a href="/games">Games</a>
+            <a href="/secretsanta">Secret Santa</a>
+            <a href="/gencorner">Generosity Corner</a>
+          </div>
+
+        <div class="go-back"><a href="/gencorner"><button>Go Back</button></a></div>
+        <h1> Clothes donation!</h1>
+        <h2> Adult clothes </h2>
+        <img src ="adultclothes.jpg" alt="adultclothes" width="500" height="300">
+        <p>Our Adult Clothes section accepts donations of gently used clothing for men and women. Whether it's business attire, casual wear, outerwear, or activewear, your contributions help individuals in need by providing them with quality clothing. Every donation makes a difference in supporting those who are looking for proper attire for work, interviews, or daily life. Your generosity helps foster dignity and self-sufficiency in the community!</p>
+        <br>
+        <details>
+            <summary><span class="p2">Information<span></summary>
+            <p>1. Accepted items:</p>
+            <p>   Any clothes in clean and in good condition.</p> 
+            <p>2. Schedule a pick up:</p>
+            <p>   Fill in the form on the right and we will get back to you shortly!</p>
+        </details>
+
+        <br>
+
+        <h2> Children clothes </h2>
+        <img src ="kidsclothes.jpg" alt="kidsclothes" width="500" height="300">
+        <p>Our Children Clothes section is dedicated to collecting donations of gently used clothing for infants, toddlers, and children up to 18 years old. Whether it’s school uniforms, play clothes, or outerwear, your donations provide children in need with the opportunity to stay warm, comfortable, and confident. By donating, you help give kids the clothing they need to grow, learn, and play!</p>
+        <br>
+        <details>
+            <summary><span class="p2">Information<span></summary>
+                <p>1. Accepted items:</p>
+                <p>   Any clothes in clean and in good condition.</p> 
+                <p>2. Schedule a pick up: </p>
+                <p>   Fill in the form on the right and we will get back to you shortly!</p>
+        </details>
+        <br>
+        </div>
+        <div class="clothes-form-body">
+            <form class="clothes-form">
+                <label for="userName"><h4>Your Name:</h4></label>
+                <input type="text" id="userName" name="userName" required=""><br>
+
+                <label for="email"><h4>Your Email:</h4></label>
+                <input type="text" id="email" name="email" required=""><br>
+
+                <label for="reason"><h4>Short description of what you will be donating:</h4></label><br>
+                <textarea id="reason" name="reason" rows="4" required=""></textarea><br>
+
+                <button type="submit">Submit</button>
+            </form>
+          </div>
+
+
+    </div>
+
+</body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</html>
